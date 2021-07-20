@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "My Gatsby Site",
+    title: "Club Portal",
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",
@@ -10,7 +10,7 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    {
+    /*{
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
@@ -25,6 +25,14 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
-    },
+    },*/
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "clubs",
+        path: "${__dirname}/clubs"
+      },
+      __key: "clubs",
+    }
   ],
 };
